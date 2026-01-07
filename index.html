@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Education Rotation Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Education Rotation Network connects students and residents with physician-educators for flexible elective rotations." />
+
+  <style>
+    :root {
+      --blue: #1f3fa8;
+      --blue-dark: #162f7a;
+      --teal: #38c6c6;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* HEADER */
+    header {
+      background: var(--blue);
+      padding: 16px 0;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    nav a {
+      margin-left: 24px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: white;
+      padding: 90px 0 110px;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      line-height: 1.15;
+      max-width: 720px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      font-size: 1.15rem;
+      max-width: 620px;
+      margin-bottom: 36px;
+      opacity: 0.95;
+    }
+
+    .cta {
+      display: inline-block;
+      background: var(--teal);
+      color: #002b2b;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 80px 0;
+    }
+
+    .alt {
+      background: var(--bg-alt);
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      max-width: 720px;
+      color: var(--muted);
+      margin-bottom: 48px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 32px;
+    }
+
+    .card {
+      background: white;
+      padding: 32px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .founders {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+    }
+
+    footer {
+      background: #0b1224;
+      color: #cbd5f5;
+      padding: 40px 0;
+      font-size: 0.9rem;
+    }
+
+    /* MOBILE */
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      nav a {
+        margin: 0 12px;
+      }
+
+      .hero {
+        padding: 70px 0 90px;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      section {
+        padding: 64px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="ern-logo.svg" alt="Education Rotation Network" style="height:48px;">
+    <nav>
+      <a href="rotations.html">Rotations</a>
+      <a href="#about">About</a>
+      <a href="#contact">Request Rotation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <h1>Learn directly from doctors.<br>Elective rotations built for modern learners.</h1>
+    <p>
+      Education Rotation Network connects students and residents with experienced
+      physician-educators for flexible one-, two-, and four-week elective rotations.
+    </p>
+    <a class="cta" href="rotations.html">Explore Rotations</a>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>How Education Rotation Network Works</h2>
+    <p class="section-desc">
+      ERN is designed to make high-quality elective experiences accessible,
+      flexible, and mentorship-driven.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Flexible Duration</h3>
+        <p>Choose from one-week, two-week, or traditional four-week electives.</p>
+      </div>
+      <div class="card">
+        <h3>Physician Educators</h3>
+        <p>Learn directly from practicing doctors committed to teaching.</p>
+      </div>
+      <div class="card">
+        <h3>Meaningful Experience</h3>
+        <p>Focused learning without unnecessary administrative barriers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="alt">
+  <div class="container">
+    <h2>About Education Rotation Network</h2>
+    <p class="section-desc">
+      Education Rotation Network was founded by physician-educators to modernize
+      how learners connect with teachers for elective training experiences.
+    </p>
+
+    <div class="founders">
+      <div><strong>Amar Damodar, MD</strong></div>
+      <div><strong>Muktak Mathur, MD</strong></div>
+      <div><strong>Bhavesh Patel, MD</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="card" style="text-align:center; background:var(--blue); color:white;">
+      <h2>Request a Rotation</h2>
+      <p>
+        Interested in an elective rotation or learning more about ERN?
+        Reach out and we’ll be in touch.
+      </p>
+      <a class="cta" href="mailto:info@educationrotationnetwork.com">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Education Rotation Network. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
