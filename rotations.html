@@ -160,12 +160,50 @@
     }
   </style>
 </head>
+  <svg width="180" height="56" viewBox="0 0 320 120"
+     xmlns="http://www.w3.org/2000/svg"
+     aria-label="Education Rotation Network"
+     role="img">
 
-<body>
+  <defs>
+    <linearGradient id="ernBlue" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#38c6c6"/>
+      <stop offset="100%" stop-color="#1f3fa8"/>
+    </linearGradient>
+  </defs>
+
+  <!-- network nodes -->
+  <circle cx="42" cy="32" r="3" fill="#38c6c6"/>
+  <circle cx="62" cy="48" r="3" fill="#38c6c6"/>
+  <circle cx="42" cy="64" r="3" fill="#38c6c6"/>
+  <line x1="42" y1="32" x2="62" y2="48" stroke="#38c6c6" stroke-width="1"/>
+  <line x1="62" y1="48" x2="42" y2="64" stroke="#38c6c6" stroke-width="1"/>
+
+  <!-- ERN text -->
+  <text x="90" y="78"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="64"
+        font-weight="800"
+        letter-spacing="4"
+        fill="url(#ernBlue)">
+    ERN
+  </text>
+
+  <!-- Full name -->
+  <text x="94" y="102"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif"
+        font-size="14"
+        font-weight="500"
+        letter-spacing="1.2"
+        fill="#cbd5f5">
+    EDUCATION ROTATION NETWORK
+  </text>
+</svg>
+  <body>
 
 <header>
   <div class="container nav">
-    <img src="ern-logo.svg" alt="Education Rotation Network" style="height:46px;">
+    
     <nav>
       <a href="index.html">Home</a>
       <a href="rotations.html">Rotations</a>
