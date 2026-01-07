@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Rotations | Education Rotation Network</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Explore elective rotations offered through Education Rotation Network." />
+
+  <style>
+    :root {
+      --blue: #1f3fa8;
+      --blue-dark: #162f7a;
+      --teal: #38c6c6;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #ffffff;
+      --bg-alt: #f8fafc;
+      --border: #e5e7eb;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    header {
+      background: var(--blue);
+      padding: 16px 0;
+      color: white;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      margin-left: 24px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .page-hero {
+      background: linear-gradient(180deg, var(--blue) 0%, var(--blue-dark) 100%);
+      color: white;
+      padding: 70px 0 80px;
+    }
+
+    .page-hero h1 {
+      font-size: 2.4rem;
+      margin-bottom: 10px;
+    }
+
+    .page-hero p {
+      max-width: 720px;
+      opacity: 0.95;
+    }
+
+    section { padding: 64px 0; }
+
+    h2 { font-size: 2rem; margin-bottom: 12px; }
+
+    .section-desc {
+      max-width: 760px;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+
+    /* SEARCH + FILTERS */
+    .controls {
+      display: grid;
+      grid-template-columns: 1fr repeat(3, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .controls input,
+    .controls select {
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 28px;
+    }
+
+    details.rotation {
+      background: white;
+      border-radius: 12px;
+      padding: 24px 26px;
+      box-shadow: 0 8px 24px rgba(15,23,42,0.06);
+    }
+
+    summary {
+      cursor: pointer;
+      list-style: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 10px;
+    }
+
+    summary::-webkit-details-marker { display: none; }
+
+    .meta {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .meta span { margin-right: 12px; }
+
+    .rotation p { margin: 8px 0; color: var(--muted); }
+
+    .rotation .cta {
+      display: inline-block;
+      margin-top: 14px;
+      padding: 10px 18px;
+      background: var(--teal);
+      color: #002b2b;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      background: #0b1224;
+      color: #cbd5f5;
+      padding: 40px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <img src="ern-logo.svg" alt="Education Rotation Network" style="height:46px;">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="rotations.html">Rotations</a>
+      <a href="index.html#contact">Request Rotation</a>
+    </nav>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Available Rotations</h1>
+    <p>Search and filter elective rotations by duration, audience, or format.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <!-- SEARCH + FILTER CONTROLS -->
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search rotations..." />
+
+      <select id="duration">
+        <option value="">All Durations</option>
+        <option value="1">1 Week</option>
+        <option value="2">2 Weeks</option>
+        <option value="4">4 Weeks</option>
+      </select>
+
+      <select id="audience">
+        <option value="">All Audiences</option>
+        <option value="student">Students</option>
+        <option value="resident">Residents</option>
+      </select>
+
+      <select id="format">
+        <option value="">All Formats</option>
+        <option value="in-person">In-Person</option>
+        <option value="remote">Remote</option>
+      </select>
+    </div>
+
+    <div class="grid" id="rotations">
+
+      <!-- ROTATION CARD -->
+      <details class="rotation"
+        data-duration="4"
+        data-audience="student resident"
+        data-format="in-person">
+        <summary>Internal Medicine Elective</summary>
+        <div class="meta">
+          <span>Duration: 2–4 weeks</span>
+          <span>Audience: Students & Residents</span>
+        </div>
+        <p>Comprehensive inpatient internal medicine with direct physician mentorship.</p>
+        <p><strong>Format:</strong> In-person</p>
+        <a class="cta" href="mailto:info@educationrotationnetwork.com?subject=Internal%20Medicine%20Elective">Request This Rotation</a>
+      </details>
+
+      <details class="rotation"
+        data-duration="1"
+        data-audience="student"
+        data-format="remote in-person">
+        <summary>Subspecialty Exposure Rotation</summary>
+        <div class="meta">
+          <span>Duration: 1–2 weeks</span>
+          <span>Audience: Students</span>
+        </div>
+        <p>Short-term subspecialty exposure for early learners exploring career paths.</p>
+        <p><strong>Format:</strong> Remote or In-person</p>
+        <a class="cta" href="mailto:info@educationrotationnetwork.com?subject=Subspecialty%20Exposure%20Rotation">Request This Rotation</a>
+      </details>
+
+      <details class="rotation"
+        data-duration="2"
+        data-audience="student resident"
+        data-format="remote in-person">
+        <summary>Custom Educator-Led Elective</summary>
+        <div class="meta">
+          <span>Duration: Flexible</span>
+          <span>Audience: Students & Residents</span>
+        </div>
+        <p>Tailored elective designed with a physician-educator around specific goals.</p>
+        <p><strong>Format:</strong> Remote or In-person</p>
+        <a class="cta" href="mailto:info@educationrotationnetwork.com?subject=Custom%20Educator-Led%20Elective">Request This Rotation</a>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© 2026 Education Rotation Network. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById('search');
+  const durationFilter = document.getElementById('duration');
+  const audienceFilter = document.getElementById('audience');
+  const formatFilter = document.getElementById('format');
+  const rotations = document.querySelectorAll('.rotation');
+
+  function filterRotations() {
+    const search = searchInput.value.toLowerCase();
+    const duration = durationFilter.value;
+    const audience = audienceFilter.value;
+    const format = formatFilter.value;
+
+    rotations.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      const d = card.dataset.duration || '';
+      const a = card.dataset.audience || '';
+      const f = card.dataset.format || '';
+
+      const matchSearch = text.includes(search);
+      const matchDuration = !duration || d.includes(duration);
+      const matchAudience = !audience || a.includes(audience);
+      const matchFormat = !format || f.includes(format);
+
+      card.style.display =
+        matchSearch && matchDuration && matchAudience && matchFormat
+          ? 'block'
+          : 'none';
+    });
+  }
+
+  [searchInput, durationFilter, audienceFilter, formatFilter]
+    .forEach(el => el.addEventListener('input', filterRotations));
+</script>
+
+</body>
+</html>
